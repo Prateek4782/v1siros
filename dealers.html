@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#11120f" />
+    <title>Find a SIROS Dealer — EV World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <nav class="nav nav--plain" aria-label="Primary navigation">
+      <a class="brand" href="index.html#top" aria-label="SIROS home">
+        <svg class="brand__mark" viewBox="0 0 168 34" role="img" aria-hidden="true">
+          <text x="0" y="24" class="brand__wordmark">SIROS</text>
+          <circle class="brand__dot" cx="158" cy="8" r="4"></circle>
+        </svg>
+      </a>
+      <div class="nav__links">
+        <a href="index.html#products">Vehicles</a>
+        <a href="index.html#range">The EV shift</a>
+        <a href="dealers.html" aria-current="page">Dealers</a>
+        <a href="index.html#faq">FAQ</a>
+      </div>
+      <div class="nav__actions">
+        <button class="nav__search-toggle" id="searchToggle" aria-label="Search vehicles" aria-expanded="false" aria-controls="siteSearch">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="15.3" y1="15.3" x2="20" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+        <a class="nav__menu" href="index.html#reserve">Get in touch <span aria-hidden="true">↗</span></a>
+        <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+
+    <div class="site-search" id="siteSearch" aria-hidden="true">
+      <div class="site-search__panel">
+        <div class="site-search__field">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="15.3" y1="15.3" x2="20" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <input type="search" id="siteSearchInput" placeholder="Search a vehicle — Nexa, ZL, AC1, Loder…" aria-label="Search vehicles by name" autocomplete="off" />
+          <button type="button" class="site-search__close" id="siteSearchClose" aria-label="Close search">✕</button>
+        </div>
+        <div class="site-search__results" id="siteSearchResults" aria-live="polite"></div>
+      </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+      <a href="index.html#products">Vehicles</a>
+      <a href="index.html#range">The EV shift</a>
+      <a href="dealers.html">Dealers</a>
+      <a href="index.html#faq">FAQ</a>
+      <a href="index.html#reserve" class="mobile-menu__cta">Get in touch <span aria-hidden="true">↗</span></a>
+    </div>
+
+    <header class="dealers-hero">
+      <p class="section-label">Dealer network</p>
+      <h1>28 dealers.<br /><em>One search away.</em></h1>
+      <p>Across Rajasthan and Madhya Pradesh — search by town, dealer name, or narrow it down by state to find your nearest SIROS showroom.</p>
+    </header>
+
+    <section class="locator locator--page" id="locator" aria-labelledby="locator-title">
+      <div class="locator__hq">
+        <span><strong>SIROS showroom</strong> — Jhalawar, Rajasthan</span>
+        <span><strong>Office</strong> — Gurugram, Haryana</span>
+        <span><strong>Plant</strong> — Sirsa, Haryana</span>
+      </div>
+
+      <div class="locator__interactive">
+        <div class="locator__search">
+          <input type="search" id="dealerSearch" placeholder="Search by town, firm or dealer name…" aria-label="Search dealers by town or name" autocomplete="off" />
+          <select id="dealerState" aria-label="Filter dealers by state">
+            <option value="all">All states</option>
+            <option value="rj">Rajasthan</option>
+            <option value="mp">Madhya Pradesh</option>
+          </select>
+        </div>
+        <p class="locator__meta" id="dealerMeta"></p>
+        <div id="dealerResults"></div>
+      </div>
+    </section>
+
+    <section class="closing" id="reserve">
+      <p>Don't see a dealer nearby yet?</p>
+      <a href="mailto:info@sirosvehicles.com?subject=Dealer%20enquiry">Ask SIROS directly <span>→</span></a>
+    </section>
+
+    <footer class="site-footer">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <svg class="brand__mark" viewBox="0 0 168 34" role="img" aria-hidden="true">
+            <text x="0" y="24" class="brand__wordmark">SIROS</text>
+            <circle class="brand__dot" cx="158" cy="8" r="4"></circle>
+          </svg>
+          <p>Electric mobility manufactured at our own plant in Sirsa, Haryana — 10 साल का भरोसा, ten years of trust.</p>
+        </div>
+
+        <div class="site-footer__col">
+          <p class="site-footer__heading">Vehicles</p>
+          <a href="products/detail.html?model=nexa">Nexa</a>
+          <a href="products/detail.html?model=zl">ZL</a>
+          <a href="products/detail.html?model=ac1">AC1</a>
+          <a href="products/detail.html?model=loder">Loder</a>
+          <a href="index.html#products">View full range ↗</a>
+        </div>
+
+        <div class="site-footer__col">
+          <p class="site-footer__heading">Ownership</p>
+          <a href="index.html#emi">EMI calculator</a>
+          <a href="dealers.html" aria-current="page">Find a dealer</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="mailto:info@sirosvehicles.com">Get in touch</a>
+        </div>
+
+        <div class="site-footer__col site-footer__col--wide">
+          <p class="site-footer__heading">Reach us</p>
+          <address><strong>Showroom</strong> — Siros Gindor, Jhalrapatan, Jhalawar, Rajasthan 326023</address>
+          <address><strong>Office</strong> — Gurugram, Haryana</address>
+          <address><strong>Plant</strong> — Sirsa, Haryana</address>
+          <a href="mailto:info@sirosvehicles.com">info@sirosvehicles.com</a>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <span>© 2026 SIROS Vehicles Pvt. Ltd. All rights reserved.</span>
+        <span>EV World</span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="dealers.js"></script>
+    <script src="locator.js"></script>
+  </body>
+</html>

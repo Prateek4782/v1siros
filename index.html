@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#11120f" />
+    <title>SIROS — EV World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="hero" id="top">
+      <div class="hero__film" aria-hidden="true">
+        <video class="hero__video" autoplay muted loop playsinline preload="auto" poster="assets/scooter-poster.jpg"
+          data-mobile-src="assets/scooter-film-mobile.mp4"
+          data-desktop-src="assets/scooter-film.mp4"
+          data-desktop-src-webm="assets/scooter-film.webm">
+        </video>
+        <div class="hero__loopmask" aria-hidden="true"></div>
+        <div class="hero__veil"></div>
+        <div class="hero__grain"></div>
+      </div>
+
+      <nav class="nav" aria-label="Primary navigation">
+        <a class="brand" href="#top" aria-label="SIROS home">
+          <svg class="brand__mark" viewBox="0 0 168 34" role="img" aria-hidden="true">
+            <text x="0" y="24" class="brand__wordmark">SIROS</text>
+            <circle class="brand__dot" cx="158" cy="8" r="4"></circle>
+          </svg>
+        </a>
+        <div class="nav__links">
+          <a href="#products">Vehicles</a>
+          <a href="#range">The EV shift</a>
+          <a href="dealers.html">Dealers</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        <div class="nav__actions">
+          <button class="nav__search-toggle" id="searchToggle" aria-label="Search vehicles" aria-expanded="false" aria-controls="siteSearch">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="15.3" y1="15.3" x2="20" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          </button>
+          <a class="nav__menu" href="#reserve">Get in touch <span aria-hidden="true">↗</span></a>
+          <button class="nav__toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+
+      <div class="site-search" id="siteSearch" aria-hidden="true">
+        <div class="site-search__panel">
+          <div class="site-search__field">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="1.8"/><line x1="15.3" y1="15.3" x2="20" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+            <input type="search" id="siteSearchInput" placeholder="Search a vehicle — Nexa, ZL, AC1, Loder…" aria-label="Search vehicles by name" autocomplete="off" />
+            <button type="button" class="site-search__close" id="siteSearchClose" aria-label="Close search">✕</button>
+          </div>
+          <div class="site-search__results" id="siteSearchResults" aria-live="polite"></div>
+        </div>
+      </div>
+
+      <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+        <a href="#products">Vehicles</a>
+        <a href="#range">The EV shift</a>
+        <a href="dealers.html">Dealers</a>
+        <a href="#faq">FAQ</a>
+        <a href="#reserve" class="mobile-menu__cta">Get in touch <span aria-hidden="true">↗</span></a>
+      </div>
+
+      <section class="hero__content" aria-label="SIROS Vehicles">
+        <p class="eyebrow reveal">01 / SIROS vehicles pvt. ltd. · EV world</p>
+        <h1 class="hero__title" aria-label="Electricity for every journey.">
+          <span class="title-line reveal">Electricity for</span>
+          <span class="title-line title-line--italic reveal">every journey.</span>
+        </h1>
+        <div class="hero__bottom reveal">
+          <p class="hero__description">SIROS is building a cleaner, quieter way to move - with electric mobility made for the pace of everyday India.</p>
+          <a class="cta" href="#reserve">
+            <span>Begin your EV shift</span><i aria-hidden="true">→</i>
+          </a>
+        </div>
+      </section>
+
+      <p class="hero__signature reveal">Made for the road ahead<br /><span>SIROS / EV WORLD</span></p>
+
+      <a class="scroll-cue" href="#range"><span>Scroll to discover</span><i aria-hidden="true"></i></a>
+    </main>
+
+    <section class="shift" id="range" aria-labelledby="shift-title">
+      <div class="shift__intro">
+        <p class="section-label" data-reveal style="transition-delay:.02s">02 / The daily shift</p>
+        <h2 id="shift-title" data-reveal style="transition-delay:.1s">Let your commute<br />keep more for <em>you.</em></h2>
+        <p data-reveal style="transition-delay:.22s">Electric mobility changes more than what you ride. It changes the rhythm of what you spend to get around every day.</p>
+      </div>
+      <div class="shift__ledger" data-reveal style="transition-delay:.3s" aria-label="Illustrative commute cost planner">
+        <div class="ledger__topline"><span>Your everyday distance</span><output id="distanceValue" for="distance">30 km / day</output></div>
+        <input class="distance" id="distance" type="range" min="10" max="100" step="5" value="30" aria-label="Daily distance in kilometres" />
+        <div class="scale"><span>10 km</span><span>100 km</span></div>
+        <div class="ledger__divider"></div>
+        <p class="ledger__caption">Monthly running cost, estimated</p>
+        <div class="cost-row"><span>Petrol commute</span><strong id="petrolCost">₹2,100</strong></div>
+        <div class="cost-row cost-row--electric"><span>Electric commute</span><strong id="electricCost">₹240</strong></div>
+        <div class="ledger__total"><span>Potential monthly difference</span><strong id="savingCost">₹1,860</strong></div>
+        <p class="ledger__note">A simple running-cost illustration. Actual results vary with local fuel and electricity prices, vehicle efficiency and riding conditions.</p>
+        <a class="ledger__link" href="#reserve">Talk to SIROS <span>↗</span></a>
+      </div>
+    </section>
+    <section class="products" id="products" aria-labelledby="products-title">
+      <div class="products__header">
+        <p class="section-label" data-reveal style="transition-delay:.02s">03 / Find your SIROS</p>
+        <h2 id="products-title" data-reveal style="transition-delay:.1s">The range, <em>in motion.</em></h2>
+        <p data-reveal style="transition-delay:.2s">Built for different routes, routines and reasons to go electric.</p>
+      </div>
+      <div class="product-carousel">
+        <button class="product-carousel__arrow product-carousel__arrow--prev" id="productPrev" aria-label="Scroll to previous vehicles" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 5l-7 7 7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="product-carousel__track" id="productGrid" aria-live="polite"></div>
+        <button class="product-carousel__arrow product-carousel__arrow--next" id="productNext" aria-label="Scroll to more vehicles">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+      </div>
+    </section>
+
+    <section class="trust" id="trust" aria-labelledby="trust-title">
+      <div class="trust__intro">
+        <p class="section-label" data-reveal style="transition-delay:.02s">04 / Ten years, on the road</p>
+        <h2 id="trust-title" data-reveal style="transition-delay:.1s">10 साल का भरोसा.<br />Built to <em>outlast the badge.</em></h2>
+        <p data-reveal style="transition-delay:.2s">Every SIROS is built at our own plant, not assembled from a catalogue of someone else's parts. A decade in, that's still the whole pitch: a vehicle that's still running when the warranty card is long forgotten.</p>
+      </div>
+
+      <div class="trust__grid">
+        <div class="trust__pillar" data-reveal style="transition-delay:0s">
+          <svg viewBox="0 0 48 48"><rect x="6" y="16" width="32" height="18" rx="3"/><rect x="38" y="22" width="4" height="6" rx="1"/><rect x="11" y="21" width="6" height="8" style="fill:currentColor;stroke:none"/><rect x="19" y="21" width="6" height="8" style="fill:currentColor;stroke:none"/><rect x="27" y="21" width="6" height="8" style="fill:currentColor;stroke:none;opacity:.35"/></svg>
+          <h3>Battery, warrantied</h3>
+          <p>3 years on lithium packs, 1 year on lead-acid — because a battery claim shouldn't be a negotiation.</p>
+        </div>
+        <div class="trust__pillar" data-reveal style="transition-delay:.08s">
+          <svg viewBox="0 0 48 48"><path d="M24 6l16 6v10c0 11-7 17.5-16 20-9-2.5-16-9-16-20V12l16-6z" stroke-linejoin="round"/><path d="M18 24l4 4 8-9" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>Anti-theft, standard</h3>
+          <p>Every model ships with an anti-theft alarm and reverse mode — not an accessory-counter upsell.</p>
+        </div>
+        <div class="trust__pillar" data-reveal style="transition-delay:.16s">
+          <svg viewBox="0 0 48 48"><path d="M10 40V20l14-10 14 10v20" stroke-linejoin="round"/><path d="M18 40V27h12v13" stroke-linejoin="round"/><path d="M6 40h36" stroke-linecap="round"/></svg>
+          <h3>Our own plant</h3>
+          <p>Manufactured at our facility in Sirsa, Haryana — with offices in Jhalawar and Gurugram to back it up.</p>
+        </div>
+        <div class="trust__pillar" data-reveal style="transition-delay:.24s">
+          <svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="16"/><text x="24" y="30" text-anchor="middle" style="font:600 15px 'DM Mono',monospace;fill:currentColor;stroke:none">₹</text></svg>
+          <h3>Financed, simply</h3>
+          <p>EMI plans through Bajaj Finserv and insurance through ICICI Lombard, arranged at the point of sale.</p>
+        </div>
+      </div>
+
+      <div class="trust__partners" data-reveal style="transition-delay:.3s">
+        <span class="trust__partners-label">Working with</span>
+        <div class="trust__partners-marks">
+          <span>Bajaj Finserv<small>Finance partner</small></span>
+          <span>ICICI Lombard<small>Insurance partner</small></span>
+          <span>Amptek · Ampure<small>Battery partners</small></span>
+          <span>Ralco Tyres<small>Tyre partner</small></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="emi" id="emi" aria-labelledby="emi-title">
+      <div class="emi__intro">
+        <p class="section-label" data-reveal style="transition-delay:.02s">05 / EMI, worked out</p>
+        <h2 id="emi-title" data-reveal style="transition-delay:.1s">Pick a price.<br />See the <em>plan.</em></h2>
+        <p data-reveal style="transition-delay:.2s">Reference numbers from the SIROS financing sheet — move the slider to your on-road price, pick a tenure, and see what you'd actually pay.</p>
+      </div>
+
+      <div class="emi__panel" data-reveal style="transition-delay:.28s">
+        <div class="emi__picker">
+          <div class="emi__topline">
+            <span>On-road price</span>
+            <output id="emiPriceValue" for="emiPrice">₹55,000</output>
+          </div>
+          <input class="emi__slider" id="emiPrice" type="range" min="40000" max="80000" step="5000" value="55000" aria-label="On-road price in rupees" />
+          <div class="emi__scale"><span>₹40,000</span><span>₹80,000</span></div>
+
+          <p class="emi__field-label">Loan tenure</p>
+          <div class="emi__tenure" id="emiTenure" role="group" aria-label="Loan tenure in months"></div>
+
+          <p class="emi__hint">Illustrative EMI reference only — actual down payment, tenure and rate are confirmed by SIROS finance partners at purchase, based on the model, battery configuration and your eligibility.</p>
+        </div>
+
+        <div class="emi__result" id="emiResult" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="locator" id="locator" aria-labelledby="locator-title">
+      <div class="locator__header">
+        <p class="section-label" data-reveal style="transition-delay:.02s">06 / Find a dealer</p>
+        <h2 id="locator-title" data-reveal style="transition-delay:.1s">Search the <em>network.</em></h2>
+        <p data-reveal style="transition-delay:.2s">28 dealers across Rajasthan and Madhya Pradesh. Search a town, or narrow it down by state.</p>
+      </div>
+
+      <div class="locator__hq" data-reveal style="transition-delay:.24s">
+        <span><strong>SIROS showroom</strong> — Jhalawar, Rajasthan</span>
+        <span><strong>Office</strong> — Gurugram, Haryana</span>
+        <span><strong>Plant</strong> — Sirsa, Haryana</span>
+      </div>
+
+      <div class="locator__interactive">
+        <div class="locator__search">
+          <input type="search" id="dealerSearch" placeholder="Search by town, firm or dealer name…" aria-label="Search dealers by town or name" autocomplete="off" />
+          <select id="dealerState" aria-label="Filter dealers by state">
+            <option value="all">All states</option>
+            <option value="rj">Rajasthan</option>
+            <option value="mp">Madhya Pradesh</option>
+          </select>
+        </div>
+        <p class="locator__meta" id="dealerMeta"></p>
+        <div id="dealerResults"></div>
+      </div>
+    </section>
+
+    <section class="faq" id="faq" aria-labelledby="faq-title">
+      <div class="faq__intro">
+        <p class="section-label" data-reveal style="transition-delay:.02s">07 / Before you ask</p>
+        <h2 id="faq-title" data-reveal style="transition-delay:.1s">Questions,<br /><em>answered.</em></h2>
+        <p data-reveal style="transition-delay:.2s">The things people usually want to know before switching — battery, charging, warranty and ownership.</p>
+      </div>
+      <div class="faq__list" data-reveal style="transition-delay:.26s">
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>How long does a SIROS battery take to charge?</span>
+            <i aria-hidden="true"></i>
+          </button>
+          <div class="faq__answer"><p>Lithium packs charge in about 3–4 hours; lead-acid packs take roughly 7–8 hours. Charging times and range figures are as stated in the SIROS vehicle catalog — actual performance can vary with load and riding conditions.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>What's the battery warranty?</span>
+            <i aria-hidden="true"></i>
+          </button>
+          <div class="faq__answer"><p>3 years on lithium battery packs, 1 year on lead-acid packs — standard across every SIROS model, not an upsell.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Can I finance a SIROS on EMI?</span>
+            <i aria-hidden="true"></i>
+          </button>
+          <div class="faq__answer"><p>Yes — EMI is available through Bajaj Finserv, and the <a href="#emi">EMI section above</a> gives illustrative down payment and monthly instalment numbers by on-road price. The final plan is confirmed by SIROS finance partners based on your eligibility.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Where are SIROS vehicles made?</span>
+            <i aria-hidden="true"></i>
+          </button>
+          <div class="faq__answer"><p>At our own manufacturing plant in Sirsa, Haryana — not assembled from a catalogue of third-party parts — with offices in Jhalawar, Rajasthan and Gurugram, Haryana.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Where can I find a dealer near me?</span>
+            <i aria-hidden="true"></i>
+          </button>
+          <div class="faq__answer"><p>SIROS has 28 dealers across Rajasthan and Madhya Pradesh. Search the <a href="dealers.html">dealer network</a> by town, firm name, or state to find the nearest showroom.</p></div>
+        </div>
+        <div class="faq__item">
+          <button class="faq__question" aria-expanded="false">
+            <span>Do all models have the same features?</span>
+            <i aria-hidden="true"></i>
+          </button>
+          <div class="faq__answer"><p>Yes — LED display, anti-theft alarm, reverse mode, USB charging, front disc brake and LED headlamp with DRL ship standard across the range. Tyre size, range and rate vary by model and battery configuration; see each vehicle's page for specifics.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing" id="reserve">
+      <p data-reveal>Find the right SIROS electric vehicle for your route.</p>
+      <a href="mailto:info@sirosvehicles.com" data-reveal style="transition-delay:.12s">Start a conversation <span>→</span></a>
+    </section>
+
+    <footer class="site-footer">
+      <div class="site-footer__top">
+        <div class="site-footer__brand">
+          <svg class="brand__mark" viewBox="0 0 168 34" role="img" aria-hidden="true">
+            <text x="0" y="24" class="brand__wordmark">SIROS</text>
+            <circle class="brand__dot" cx="158" cy="8" r="4"></circle>
+          </svg>
+          <p>Electric mobility manufactured at our own plant in Sirsa, Haryana — 10 साल का भरोसा, ten years of trust.</p>
+        </div>
+
+        <div class="site-footer__col">
+          <p class="site-footer__heading">Vehicles</p>
+          <a href="products/detail.html?model=nexa">Nexa</a>
+          <a href="products/detail.html?model=zl">ZL</a>
+          <a href="products/detail.html?model=ac1">AC1</a>
+          <a href="products/detail.html?model=loder">Loder</a>
+          <a href="#products">View full range ↗</a>
+        </div>
+
+        <div class="site-footer__col">
+          <p class="site-footer__heading">Ownership</p>
+          <a href="#emi">EMI calculator</a>
+          <a href="dealers.html">Find a dealer</a>
+          <a href="#faq">FAQ</a>
+          <a href="mailto:info@sirosvehicles.com">Get in touch</a>
+        </div>
+
+        <div class="site-footer__col site-footer__col--wide">
+          <p class="site-footer__heading">Reach us</p>
+          <address>
+            <strong>Showroom</strong> — Siros Gindor, Jhalrapatan, Jhalawar, Rajasthan 326023
+          </address>
+          <address>
+            <strong>Office</strong> — Gurugram, Haryana
+          </address>
+          <address>
+            <strong>Plant</strong> — Sirsa, Haryana
+          </address>
+          <a href="mailto:info@sirosvehicles.com">info@sirosvehicles.com</a>
+        </div>
+      </div>
+
+      <div class="site-footer__bottom">
+        <span>© 2026 SIROS Vehicles Pvt. Ltd. All rights reserved.</span>
+        <span>EV World</span>
+      </div>
+    </footer>
+    <script src="script.js"></script><script src="products/products.js"></script>
+    <script src="emi-data.js"></script><script src="dealers.js"></script><script src="locator.js"></script>
+  </body>
+</html>
