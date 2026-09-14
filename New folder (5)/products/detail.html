@@ -1,0 +1,36 @@
+<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/><title>SIROS Vehicle</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet"><link rel="stylesheet" href="../styles.css">
+<style>
+.siros-features{--sf-dark:#153228;--sf-dark2:#1f4a3d;--sf-mid:#2c6a55;--sf-gold:#caa04c;--sf-cream:#f5efe1;
+  max-width:1180px;margin:0 auto;padding:64px 24px 72px;box-sizing:border-box;}
+.siros-features__head{max-width:640px;margin:0 auto 40px;text-align:center;}
+.siros-features__eyebrow{font-family:'DM Mono',monospace;font-size:12px;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--sf-mid);margin:0 0 10px;}
+.siros-features__title{font-family:'Playfair Display',serif;font-weight:600;font-size:clamp(24px,3vw,32px);
+  color:var(--sf-dark);margin:0;line-height:1.25;}
+.siros-features__grid{list-style:none;margin:0;padding:0;display:grid;
+  grid-template-columns:repeat(6,1fr);gap:32px 18px;}
+@media (max-width:920px){.siros-features__grid{grid-template-columns:repeat(3,1fr);}}
+@media (max-width:520px){.siros-features__grid{grid-template-columns:repeat(2,1fr);gap:28px 14px;}}
+.siros-features__item{display:flex;flex-direction:column;align-items:center;text-align:center;gap:12px;
+  opacity:0;transform:translateY(16px);transition:opacity .6s cubic-bezier(.22,.61,.36,1),transform .6s cubic-bezier(.22,.61,.36,1);
+  transition-delay:var(--d,0s);}
+.siros-features__item.is-visible{opacity:1;transform:translateY(0);}
+.siros-features__ring{width:68px;height:68px;border-radius:50%;flex:none;display:flex;align-items:center;justify-content:center;
+  padding:16px;box-sizing:border-box;color:var(--sf-cream);
+  background:radial-gradient(circle at 32% 28%,var(--sf-mid),var(--sf-dark2) 60%,var(--sf-dark));
+  border:1px solid rgba(202,160,76,.55);
+  box-shadow:0 6px 16px rgba(21,50,40,.18), inset 0 0 0 1px rgba(255,255,255,.04);
+  transition:transform .35s cubic-bezier(.22,.61,.36,1), border-color .35s ease, box-shadow .35s ease;}
+.siros-features__item:hover .siros-features__ring{transform:translateY(-4px) scale(1.04);
+  border-color:var(--sf-gold);box-shadow:0 12px 22px rgba(21,50,40,.28);}
+.siros-features__ring svg{width:100%;height:100%;}
+.siros-features__label{font-family:'Manrope',sans-serif;font-size:12.5px;line-height:1.35;color:var(--sf-dark);
+  max-width:128px;min-height:2.7em;display:flex;align-items:flex-start;justify-content:center;}
+.siros-features__label b{display:block;font-weight:700;}
+.siros-features__label small{display:block;color:var(--sf-mid);font-size:11px;margin-top:2px;}
+@media (prefers-reduced-motion:reduce){
+  .siros-features__item{opacity:1;transform:none;transition:none;}
+  .siros-features__item:hover .siros-features__ring{transform:none;}
+}
+</style>
+</head><body><main class="product-detail" id="productDetail"><nav class="detail-nav"><a class="brand" href="../index.html"><img src="../assets/siros-logo.png" alt="SIROS Vehicles Pvt. Ltd. EV World"/></a><a href="../index.html#products">← All vehicles</a></nav><section class="detail-hero"><p class="section-label" id="detailKicker">SIROS electric vehicle</p><h1 id="detailName">SIROS<span>Electric, for the everyday.</span></h1><p id="detailIntro">Choose the configuration that suits your road and routine.</p><a href="mailto:info@sirosvehicles.com" class="detail-cta">Request current price <span>→</span></a></section><section class="detail-specs" id="detailSpecs"></section><section class="siros-features" id="featureIcons"></section><section class="rate-section"><div><p class="section-label">Website rates / configuration</p><h2>Pick your<br /><em>power.</em></h2><p>Ex-showroom rates are shown by battery configuration. EMI is available through SIROS finance partners; the final monthly amount is based on your down payment, tenure and approval.</p></div><div class="rate-table-wrap"><table class="rate-table"><thead><tr><th>Battery</th><th>Average range</th><th>Rate</th></tr></thead><tbody id="rateRows"></tbody></table></div></section><section class="detail-info"><div><p class="section-label">Ownership</p><h2>EMI, on your terms.</h2><p>Speak with SIROS for a personalized EMI plan and the final on-road price in your city.</p><a id="emiLink" href="mailto:info@sirosvehicles.com">Ask about EMI plans ↗</a></div><div class="feature-list"><p>What the rate includes</p><span>Chosen battery configuration</span><span>Current ex-showroom rate</span><span>Personalised EMI options</span><span>City-specific price guidance</span></div></section><p class="detail-disclaimer">Rates are based on the SIROS Website Rates sheet supplied. EMI terms, registration, insurance and local charges are confirmed by SIROS at enquiry.</p></main><script src="products.js"></script></body></html>
